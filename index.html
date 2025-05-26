@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertGigaBytetomegabytes</title>
+</head>
+<style>
+    .container{
+        width: 300px;
+        height:200px;
+        background-color: rgba(128, 128, 128, 0.459);
+        margin: auto;
+        border-radius: 15px;
+    }
+    input{
+        transform: translateX(60px);
+        border-radius: 5px;
+        text-align: center;
+    }
+    h4{
+        transform: translateY(40px);
+        margin-left: 10px;
+    }
+    h5{
+        transform: translateX(232px);
+        margin-top: -20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h4>From:</h4>
+        <input type="text" id="gigabyte" placeholder="Enter a number">
+        <h5>Gigabytes</h5>
+        <h4>To:</h4>
+        <input type="text" id="megabyte" placeholder="Result" >
+        <h5>Megabytes</h5>
+        <input style="margin-left: 25px;" type="button" value="Convert" onclick="calculation()">
+        <input type="button" value="Reset" onclick="location.reload()">
+    </div>
+</body>
+<script>
+    function calculation(){
+        var gigabyte = document.getElementById("gigabyte").value;
+        var megabyte = gigabyte*1024;
+        document.getElementById("megabyte").value = megabyte
+    }
+    function reset(){
+        Location.reload();
+    }
+</script>
+</html>
